@@ -40,7 +40,7 @@ export const fetchRocket = () => (async (dispatch) => {
 const rocketReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_ROCKET:
-      return [...state, action.rockets];
+      return action.rockets;
     case RESERVE_ROCKET: {
       const newState = state.map((rocket) => {
         if (rocket.rocketId !== action.rocketId) {

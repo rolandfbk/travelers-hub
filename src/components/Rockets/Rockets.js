@@ -1,40 +1,44 @@
-import React, { useEffect } from 'react';
+import { React, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchRocket } from '../../Redux/Rocket/Rockets';
-import styles from './Rockets.css';
+import { fetchRocket, reserveRocket } from '../../Redux/Rocket/Rockets';
 
 const Rockets = () => {
-  const rocketsinfo = useSelector((state) => state.rocketsReducer);
+  const rocketData = useSelector((state) => state.rocketReducer);
 
   const dispatch = useDispatch();
 
   const getRockets = () => {
-    if (rocketsinfo.length === 0) {
+    if (rocketData.length === 0) {
       dispatch(fetchRocket());
     }
   };
+
+  const rocketBooking = (id) => {
+    dispatch(reserveRocket(id));
+  };
+
+  // const cancelBooking = (id) => {
+  //   dispatch(cancelReserve(id));
+  // };
 
   useEffect(() => {
     getRockets();
   }, []);
 
   return (
-    <div className={styles.rocketList}>
-      {rocketsinfo.map((rocket) => (
-        <div key={rocket.rocket_id} className={styles['rocket-card']}>
-          <div className={styles['rocket-image']}>
-            <img className={styles['rock-img']} src={rocket.rocket_img} alt={rocket.rocket_name} />
+    <div>
+      {rocketData.map((rockets) => (
+        <div key={rockets.rocket_id}>
+          <div>
+            <img src={rockets.rocket_img} alt={rockets.rocket_name} />
           </div>
-          <div className={styles['title-desc']}>
-            <h2>{rocket.rocket_name}</h2>
-            <p className={styles.parag}>
-              {rocket.rocket_description}
-            </p>
-            <button type="button" className={styles['rocket-btn']}>Reserve Rocket</button>
+          <div>
+            <h1>{rockets.rocket_name}</h1>
+            <p>{rockets.rocket_description}</p>
+            <button type="button" onClick={rocketBooking}>Reserve Rocket</button>
           </div>
         </div>
       ))}
-
     </div>
   );
 };
