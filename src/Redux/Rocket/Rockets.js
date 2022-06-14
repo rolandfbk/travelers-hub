@@ -42,11 +42,11 @@ const rocketReducer = (state = initialState, action) => {
     case ADD_ROCKET:
       return action.rockets;
     case RESERVE_ROCKET: {
-      const newState = state.map((rocket) => {
-        if (rocket.rocketId !== action.rocketId) {
-          return rocket;
+      const newState = state.map((r) => {
+        if (r.rocket_id !== action.rocketId) {
+          return r;
         }
-        return { ...rocket, reserved: true };
+        return { ...r, reserved: true };
       });
       return newState;
     }

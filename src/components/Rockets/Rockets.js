@@ -1,6 +1,6 @@
 import { React, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchRocket, reserveRocket } from '../../Redux/Rocket/Rockets';
+import { fetchRocket, reserveRocket, cancelReserve } from '../../Redux/Rocket/Rockets';
 import './Rockets.css';
 
 const Rockets = () => {
@@ -18,9 +18,9 @@ const Rockets = () => {
     dispatch(reserveRocket(id));
   };
 
-  // const cancelBooking = (id) => {
-  //   dispatch(cancelReserve(id));
-  // };
+  const cancelBooking = (id) => {
+    dispatch(cancelReserve(id));
+  };
 
   useEffect(() => {
     getRockets();
@@ -30,16 +30,35 @@ const Rockets = () => {
     <div>
       {rocketData.map((rockets) => (
         <div key={rockets.rocket_id} className="display">
-          <div className="display-rocket">
-            <div>
-              <img className="rocket-image" src={rockets.rocket_img} alt={rockets.rocket_name} />
-            </div>
-            <div>
-              <h1 className="rocket-name">{rockets.rocket_name}</h1>
-              <p className="description">{rockets.rocket_description}</p>
-              <button type="button" onClick={rocketBooking}>Reserve Rocket</button>
-            </div>
+
+          <img className="rocket-image" src={rockets.rocket_img} alt={rockets.rocket_name} />
+
+          <div className="info">
+            <h1 className="rocket-name">{rockets.rocket_name}</h1>
+            <p className="description">
+              {rockets.reserved ? (<span className="span">Reserved</span>) : (false)}
+              {rockets.rocket_description}
+            </p>
+            {rockets.reserved ? (
+              <button
+                onClick={() => cancelBooking(rockets.rocket_id)}
+                type="button"
+                className="cancel-button"
+              >
+                Cancel Reservation
+              </button>
+            ) : (
+              <button
+                onClick={() => rocketBooking(rockets.rocket_id)}
+                type="button"
+                className="reserve-button"
+              >
+                Reserve Rocket
+              </button>
+
+            )}
           </div>
+
         </div>
       ))}
     </div>
