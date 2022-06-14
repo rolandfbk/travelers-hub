@@ -71,7 +71,7 @@ const missionReducer = (state = [], action) => {
         };
         arr.push(obj);
       }
-      return arr;
+      return [...state, ...arr];
     }
     default: return state;
   }

@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const SingleMission = (props) => {
+const SingleMission = ({ mission, joinMission }) => {
   const {
     missionId, missionName, description, join, buttonText, buttonColor, memberText, memberColor,
-  } = props.mission;
+  } = mission;
 
   const btnStyle = {
     color: buttonColor,
@@ -25,7 +25,7 @@ const SingleMission = (props) => {
       <td>{ description }</td>
       <td><span style={memberStyle}>{ memberText }</span></td>
       <td>
-        <button style={btnStyle} onClick={() => props.joinMission(missionId, join)}>
+        <button type="button" style={btnStyle} onClick={() => joinMission(missionId, join)}>
           { buttonText }
         </button>
       </td>
@@ -33,16 +33,17 @@ const SingleMission = (props) => {
   );
 };
 
-/* SingleMission.propTypes = {
-  mission: PropTypes.object,
-  missionId: PropTypes.string,
-  missionName: PropTypes.string,
-  description: PropTypes.string,
-  join: PropTypes.bool,
-  buttonText: PropTypes.string,
-  buttonColor: PropTypes.string,
-  memberText: PropTypes.string,
-  memberColor: PropTypes.string,
-}; */
+SingleMission.propTypes = {
+  joinMission: PropTypes.isRequired,
+  mission: PropTypes.isRequired,
+  missionId: PropTypes.string.isRequired,
+  missionName: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  join: PropTypes.bool.isRequired,
+  buttonText: PropTypes.string.isRequired,
+  buttonColor: PropTypes.string.isRequired,
+  memberText: PropTypes.string.isRequired,
+  memberColor: PropTypes.string.isRequired,
+};
 
 export default SingleMission;
