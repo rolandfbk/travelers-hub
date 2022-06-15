@@ -13,7 +13,10 @@ export const getMissionFromApi = async (dispatch) => {
       payload: res,
     });
   } catch (err) {
-    console.log(err);
+    dispatch({
+      type: GET_MISSION_FROM_API,
+      payload: [],
+    });
   }
 };
 
@@ -71,7 +74,8 @@ const missionReducer = (state = [], action) => {
         };
         arr.push(obj);
       }
-      return [...state, ...arr];
+
+      return arr;
     }
     default: return state;
   }

@@ -8,10 +8,6 @@ const Missions = () => {
 
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    getMissionFromApi(dispatch);
-  }, [dispatch]);
-
   const joinMission = (id, join) => {
     if (join) {
       dispatch(memberLeave(id));
@@ -19,6 +15,12 @@ const Missions = () => {
       dispatch(memberJoin(id));
     }
   };
+
+  useEffect(() => {
+    if (listing.length === 0) {
+      getMissionFromApi(dispatch);
+    }
+  }, [dispatch]);
 
   return (
     <MissionList listing={listing} joinMission={joinMission} />
