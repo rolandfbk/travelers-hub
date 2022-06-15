@@ -13,7 +13,10 @@ export const getMissionFromApi = async (dispatch) => {
       payload: res,
     });
   } catch (err) {
-    console.log(err);
+    dispatch({
+      type: GET_MISSION_FROM_API,
+      payload: [],
+    });
   }
 };
 
