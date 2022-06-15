@@ -1,6 +1,6 @@
 import { React, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchRocket, reserveRocket, cancelReserve } from '../../Redux/Rocket/Rockets';
+import { fetchRocket, reserveRocket, cancelReserve } from '../../redux/Rocket/Rockets';
 import './Rockets.css';
 
 const Rockets = () => {
