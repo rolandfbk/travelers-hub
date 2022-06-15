@@ -65,7 +65,7 @@ header {
   background-color: rgb(211 211 211 / 38%);
 }
 
-.mission-table th, td {
+.mission-table th {
   border: 1px solid lightgrey;
   padding: 5px;
 }
