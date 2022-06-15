@@ -49,3 +49,27 @@ header {
   border-right: 2px solid black;
   padding-right: 20px;
 }
+
+.mission-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.mission-table {
+  width: 90%;
+  border-collapse: collapse;
+}
+
+.mission-table th, td {
+  border: 1px solid lightgrey;
+  padding: 5px;
+}
+
+.mission-table th {
+  text-align: left;
+}
+
+.mission-td {
+  text-align: center;
+}

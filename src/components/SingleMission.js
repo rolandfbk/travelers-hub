@@ -10,21 +10,24 @@ const SingleMission = ({ mission, joinMission }) => {
     color: buttonColor,
     border: '1px solid '.concat(buttonColor),
     whiteSpace: 'nowrap',
+    padding: '5px',
+    width: '100px',
   };
 
   const memberStyle = {
     backgroundColor: memberColor,
     color: '#fff',
-    padding: '5px',
+    padding: '3px',
     whiteSpace: 'nowrap',
+    width: '120px',
   };
 
   return (
     <tr>
-      <td>{ missionName }</td>
+      <td><b>{ missionName }</b></td>
       <td>{ description }</td>
-      <td><span style={memberStyle}>{ memberText }</span></td>
-      <td>
+      <td className='mission-td'><div style={memberStyle}>{ memberText }</div></td>
+      <td className='mission-td'>
         <button type="button" style={btnStyle} onClick={() => joinMission(missionId, join)}>
           { buttonText }
         </button>
