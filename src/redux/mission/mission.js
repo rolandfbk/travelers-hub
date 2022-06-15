@@ -1,6 +1,7 @@
 const JOIN_MISSION = 'travelers-hub/mission/JOIN_MISSION';
 const LEAVE_MISSION = 'travelers-hub/mission/LEAVE_MISSION';
 const GET_MISSION_FROM_API = 'travelers-hub/mission/GET_MISSION_FROM_API';
+// Actions Creator
 
 export const getMissionFromApi = async (dispatch) => {
   try {
