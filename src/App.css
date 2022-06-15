@@ -49,3 +49,33 @@ header {
   border-right: 2px solid black;
   padding-right: 20px;
 }
+
+.mission-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.mission-table {
+  width: 90%;
+  border-collapse: collapse;
+}
+
+.mission-table > tbody > tr:nth-child(odd) {
+  background-color: rgb(211 211 211 / 38%);
+}
+
+.mission-table td {
+  border: 1px solid lightgrey;
+  padding: 5px;
+}
+
+.mission-table th {
+  text-align: left;
+  border: 1px solid lightgrey;
+  padding: 5px;
+}
+
+.mission-td {
+  text-align: center;
+}
