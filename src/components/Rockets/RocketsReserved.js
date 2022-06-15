@@ -6,14 +6,22 @@ const RocketsReserved = () => {
 
   const reservedRockets = selectedRockets.filter((rocket) => rocket.reserved);
 
+  if (reservedRockets.length === 0) {
+    return (
+      <div className="my-profile-item">
+        <h2>My Rockets</h2>
+        <p>Be the first to reserve...</p>
+      </div>
+    );
+  }
   return (
-    <div>
-      <h2>My Reserved Rockets</h2>
-      <table>
+    <div className="my-profile-item">
+      <h2>My Rockets</h2>
+      <table className="my-profile-mission-table">
         <tbody>
           {reservedRockets.map((rocket) => (
             <tr key={rocket.rocket_id}>
-              <td>{rocket.rocket_name}</td>
+              <td className="my-profil-mission">{rocket.rocket_name}</td>
             </tr>
           ))}
         </tbody>

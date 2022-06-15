@@ -50,6 +50,16 @@ header {
   padding-right: 20px;
 }
 
+.active-link {
+  color: #000;
+  text-decoration: none;
+}
+
+.active {
+  color: blue;
+  text-decoration: underline;
+}
+
 .mission-section {
   display: flex;
   justify-content: center;
@@ -78,4 +88,30 @@ header {
 
 .mission-td {
   text-align: center;
+}
+
+.my-profile {
+  display: flex;
+  justify-content: center;
+}
+
+.my-profile-align {
+  display: flex;
+  gap: 20px;
+  width: 90%;
+}
+
+.my-profile-item {
+  flex: 1;
+}
+
+.my-profile-mission-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.my-profil-mission {
+  text-align: left;
+  border: 1px solid lightgrey;
+  padding: 5px;
 }
