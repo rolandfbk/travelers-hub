@@ -1,0 +1,42 @@
+.rocket-image {
+  height: 25vh;
+  width: 200px;
+  margin-left: 5%;
+}
+
+.display {
+  display: flex;
+  width: 100%;
+  margin-top: 3%;
+}
+
+.info {
+  margin-left: 2%;
+}
+
+.reserve-button {
+  background-color: #007bff;
+  border-radius: 10%;
+  border: none;
+  color: #fff;
+  height: 40px;
+}
+
+.rocket-name {
+  margin-top: 0;
+}
+
+.cancel-button {
+  background-color: #fff;
+  color: lightgray;
+  border: 1px solid black;
+  height: 40px;
+  border-radius: 10%;
+}
+
+.span {
+  background-color: #66c1cf;
+  color: #fff;
+  padding: 4px;
+  border-radius: 10%;
+}
