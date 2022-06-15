@@ -61,7 +61,16 @@ header {
   border-collapse: collapse;
 }
 
+.mission-table > tbody > tr:nth-child(odd) {
+  background-color: rgb(211 211 211 / 38%);
+}
+
 .mission-table th, td {
+  border: 1px solid lightgrey;
+  padding: 5px;
+}
+
+.mission-table td {
   border: 1px solid lightgrey;
   padding: 5px;
 }

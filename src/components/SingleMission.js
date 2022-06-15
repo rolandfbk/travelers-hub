@@ -26,8 +26,8 @@ const SingleMission = ({ mission, joinMission }) => {
     <tr>
       <td><b>{ missionName }</b></td>
       <td>{ description }</td>
-      <td className='mission-td'><div style={memberStyle}>{ memberText }</div></td>
-      <td className='mission-td'>
+      <td className="mission-td"><div style={memberStyle}>{ memberText }</div></td>
+      <td className="mission-td">
         <button type="button" style={btnStyle} onClick={() => joinMission(missionId, join)}>
           { buttonText }
         </button>
@@ -37,16 +37,28 @@ const SingleMission = ({ mission, joinMission }) => {
 };
 
 SingleMission.propTypes = {
-  joinMission: PropTypes.isRequired,
-  mission: PropTypes.isRequired,
-  missionId: PropTypes.string.isRequired,
-  missionName: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  join: PropTypes.bool.isRequired,
-  buttonText: PropTypes.string.isRequired,
-  buttonColor: PropTypes.string.isRequired,
-  memberText: PropTypes.string.isRequired,
-  memberColor: PropTypes.string.isRequired,
+  joinMission: PropTypes.func.isRequired,
+  mission: PropTypes.instanceOf(Object),
+  missionId: PropTypes.string,
+  missionName: PropTypes.string,
+  description: PropTypes.string,
+  join: PropTypes.bool,
+  buttonText: PropTypes.string,
+  buttonColor: PropTypes.string,
+  memberText: PropTypes.string,
+  memberColor: PropTypes.string,
+};
+
+SingleMission.defaultProps = {
+  mission: {},
+  missionId: '',
+  missionName: '',
+  description: '',
+  join: false,
+  buttonText: '',
+  buttonColor: '',
+  memberText: '',
+  memberColor: '',
 };
 
 export default SingleMission;
