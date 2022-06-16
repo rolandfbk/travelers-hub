@@ -12,6 +12,7 @@ const SingleMission = ({ mission, joinMission }) => {
     whiteSpace: 'nowrap',
     padding: '5px',
     width: '100px',
+    cursor: 'pointer',
   };
 
   const memberStyle = {
