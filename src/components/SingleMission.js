@@ -24,8 +24,8 @@ const SingleMission = ({ mission, joinMission }) => {
 
   return (
     <tr>
-      <td><b>{ missionName }</b></td>
-      <td>{ description }</td>
+      <td className="mission-td-top"><b>{ missionName }</b></td>
+      <td className="mission-td-top">{ description }</td>
       <td className="mission-td"><div style={memberStyle}>{ memberText }</div></td>
       <td className="mission-td">
         <button type="button" style={btnStyle} onClick={() => joinMission(missionId, join)}>

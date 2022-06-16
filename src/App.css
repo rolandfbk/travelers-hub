@@ -41,8 +41,14 @@ header {
 
 .links {
   display: flex;
-  gap: 25px;
+  gap: 20px;
   margin-right: 3%;
+  list-style: none;
+}
+
+.links li {
+  display: flex;
+  gap: 20px;
 }
 
 .navlinks {
@@ -51,7 +57,7 @@ header {
 }
 
 .active-link {
-  color: #000;
+  color: rgb(0, 89, 255);
   text-decoration: none;
 }
 
@@ -64,6 +70,7 @@ header {
   display: flex;
   justify-content: center;
   margin-top: 20px;
+  margin-bottom: 50px;
 }
 
 .mission-table {
@@ -86,6 +93,10 @@ header {
   padding: 5px;
 }
 
+.mission-td-top {
+  vertical-align: top;
+}
+
 .mission-td {
   text-align: center;
 }
@@ -93,6 +104,7 @@ header {
 .my-profile {
   display: flex;
   justify-content: center;
+  margin-bottom: 50px;
 }
 
 .my-profile-align {

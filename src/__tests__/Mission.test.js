@@ -14,4 +14,3 @@ it('renders correctly', () => {
   const tree = renderer.create(<MissionProvider />).toJSON();
   expect(tree).toMatchSnapshot();
 });
-
