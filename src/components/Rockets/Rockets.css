@@ -29,6 +29,7 @@
   border: none;
   color: #fff;
   height: 40px;
+  cursor: pointer;
 }
 
 .rocket-name {
