@@ -28,6 +28,7 @@ const Rockets = () => {
 
   return (
     <div className="rocket">
+      <div className="rocket-align">
       {rocketData.map((rockets) => (
         <div key={rockets.rocket_id} className="display">
 
@@ -61,6 +62,7 @@ const Rockets = () => {
 
         </div>
       ))}
+      </div>
     </div>
   );
 };

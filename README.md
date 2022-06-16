@@ -2,7 +2,7 @@
 
 # Traveler's Hub
 
-> Render live data from the SpaceX API. Your task is to build a web application for a company that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions.
+> Render live data from the SpaceX API. This is web application for a company that provides commercial and scientific space travel services. It allows users to book rockets and join selected space missions.
 
 
 ## Built With

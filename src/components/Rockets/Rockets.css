@@ -1,11 +1,16 @@
 .rocket {
+  display: flex;
+  justify-content: center;
   margin-bottom: 50px;
+}
+
+.rocket-align {
+  width: 90%;
 }
 
 .rocket-image {
   height: 25vh;
   width: 200px;
-  margin-left: 5%;
 }
 
 .display {
