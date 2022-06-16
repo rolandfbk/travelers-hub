@@ -1,38 +1,129 @@
-.App {
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.header-image {
+  height: 70px;
+  width: 10%;
+}
+
+nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+
+.logo {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  margin-left: 3%;
+}
+
+header {
+  width: 100%;
+}
+
+.hr {
+  height: 2px;
+  width: 95%;
+  background-color: lightgrey;
+  margin-left: 2.5%;
+  margin-top: 15px;
+}
+
+.header-one {
+  margin-left: 5%;
+}
+
+.links {
+  display: flex;
+  gap: 20px;
+  margin-right: 3%;
+  list-style: none;
+}
+
+.links li {
+  display: flex;
+  gap: 20px;
+}
+
+.navlinks {
+  border-right: 2px solid black;
+  padding-right: 20px;
+}
+
+.active-link {
+  color: rgb(0, 89, 255);
+  text-decoration: none;
+}
+
+.active {
+  color: blue;
+  text-decoration: underline;
+}
+
+.mission-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.mission-table {
+  width: 90%;
+  border-collapse: collapse;
+}
+
+.mission-table > tbody > tr:nth-child(odd) {
+  background-color: rgb(211 211 211 / 38%);
+}
+
+.mission-table td {
+  border: 1px solid lightgrey;
+  padding: 5px;
+}
+
+.mission-table th {
+  text-align: left;
+  border: 1px solid lightgrey;
+  padding: 5px;
+}
+
+.mission-td-top {
+  vertical-align: top;
+}
+
+.mission-td {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.my-profile {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 50px;
 }
 
-.App-link {
-  color: #61dafb;
+.my-profile-align {
+  display: flex;
+  gap: 20px;
+  width: 90%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.my-profile-item {
+  flex: 1;
+}
+
+.my-profile-mission-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.my-profil-mission {
+  text-align: left;
+  border: 1px solid lightgrey;
+  padding: 5px;
 }
