@@ -27,7 +27,7 @@ const Rockets = () => {
   }, []);
 
   return (
-    <div>
+    <div className="rocket">
       {rocketData.map((rockets) => (
         <div key={rockets.rocket_id} className="display">
 
